@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="scm_Debug:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="scm_Debug.war">
+      <element id="artifact" artifact-name="scm_Debug:war exploded" />
+    </root>
+  </artifact>
+</component>

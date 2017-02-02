@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.zhyw.scm.dao.DeptMapper">
+  <resultMap id="BaseResultMap" type="cn.zhyw.scm.entity.Dept">
+    <id column="dept_id" jdbcType="INTEGER" property="deptId" />
+    <result column="dept_name" jdbcType="VARCHAR" property="deptName" />
+    <result column="dept_address" jdbcType="VARCHAR" property="deptAddress" />
+  </resultMap>
+  <select id="selectDept" parameterType="Integer" resultMap="BaseResultMap">
+    select * FROM dept WHERE dept_id=#{deptId}
+  </select>
+  <insert id="insertDept" parameterType="cn.zhyw.scm.entity.Dept">
+    INSERT INTO dept(dept_name,dept_address) VALUES (#{deptName},#{deptAddress})
+  </insert>
+</mapper>
